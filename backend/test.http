@@ -1,0 +1,19 @@
+ POST http://localhost:5000/login
+ Content-Type: application/json
+
+ {
+     "fullName":"sfbhiyvszd",
+     "username":"fswefdp",
+     "email":"isfdbese@mail.com",
+     "password":"2sfbesr"
+ }
+
+# GET  http://localhost:5000/forum
+#  Content-Type: application/json
+
+#  {
+#      "fullName":"sfbhiyvszd",
+#      "username":"sppp",
+#      "email":"isfdbese@mail.com",
+#      "password":"2sfbesr"
+#  }
