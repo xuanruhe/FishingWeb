@@ -20,10 +20,11 @@ function Recipe() {
             setIngredients(res.hits);
         })
     }
+
     useEffect(() => {
         searchForRecipe('fish');
-        
     }, []);
+    
     return (
         <>
             <div className='recipe'>

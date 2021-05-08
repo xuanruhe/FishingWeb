@@ -1,11 +1,9 @@
- POST http://localhost:5000/login
+ POST localhost:5000/posts?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwODc2OTNjMzI3OWRiZTlhOTBkY2JhMyIsImVtYWlsIjoiMTIzIn0sImlhdCI6MTYxOTQ4NzEwM30.TdsedqNTXx4AYh7iJ9YnRfNYupjQJSCVnp5v8hrjyDU
  Content-Type: application/json
 
  {
-     "fullName":"sfbhiyvszd",
-     "username":"fswefdp",
-     "email":"isfdbese@mail.com",
-     "password":"2sfbesr"
+     "title":"third post",
+     "content":"new post"
  }
 
 # GET  http://localhost:5000/forum

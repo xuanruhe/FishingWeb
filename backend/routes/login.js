@@ -1,33 +1,36 @@
-const express = require ('express');
-const passport = require("passport");
+const express = require('express');
+const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 const router = express.Router();
-const signUpTemplateCopy = require('../models/SignUpModels')
 
-
-
-router.post("/login", function(req, res){
-
-    const signedUpUser = new signUpTemplateCopy({
-        fullName:req.body.fullName, 
-        username:req.body.username,
-        email:req.body.email,
-        password: req.body.password,
-    });
-  
-    req.login(signedUpUser, function(err){
-      if (err) {
-        console.log(err);
-      } else {
-        passport.authenticate("local")(req, res, function(){
-          console.log("signedin");
-          res.redirect("/forum");
-        });
+router.post(
+  '/login',
+  async (req, res, next) => {
+    passport.authenticate(
+      'login',
+      async (err, user, info) => {
+        try {
+          if (err || !user) {
+            const error = new Error('An error occurred.');
+            return next(error);
+          }
+          req.login(
+            user,
+            { session: false },
+            async (error) => {
+              if (error) return next(error);
+              const body = { _id: user._id, email: user.email };
+              const token = jwt.sign({ user: body }, 'TOP_SECRET');
+              return res.json({ token });
+            }
+          );
+        } catch (error) {
+          return next(error);
+        }
       }
-    });
-  
-  });
+    )(req, res, next);
+  }
+);
 
-  module.exports = router;
-  
-  
+module.exports = router;
