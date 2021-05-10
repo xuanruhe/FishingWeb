@@ -42,14 +42,16 @@ function Forum() {
     return (
         <>
             <div className='forum'>
-                FORUM
+                FORUMMM
             </div>
             <div>
             {posts.map((item, index) => {
+                    const title = item.title
+                    const date = item.date.toString().substring(0, 10);
                     return(
                         <div key = {index}>
-                            <p>{item.title}</p>
-                            <p>{item.content}</p>
+                            <a href={'/forum/' + title}>{title}</a>
+                            <p>{date}</p>
                         </div>
                     )
                 })}

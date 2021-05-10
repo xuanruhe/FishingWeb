@@ -11,6 +11,7 @@ import SignUp from './components/pages/SignUp';
 import Recipe from './components/pages/Recipe';
 import Login from './components/pages/Login';
 import Forum from './components/pages/Forum';
+import Post from './components/pages/Post';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path = '/weather' exact component={Weather}/>
           <Route path = '/login' exact component={Login}/>
           <Route path = '/forum' exact component={Forum}/>
+          <Route path = '/forum/:title' exact component={Post} />
         </Switch>
       </Router>
       

@@ -8,6 +8,10 @@ const postTemplate = new mongoose.Schema({
     content:{
         type:String,
     },
+    date: { 
+        type: Date, 
+        default: Date.now 
+    },
 })
 
 const postTable = new mongoose.model('postTable', postTemplate);
