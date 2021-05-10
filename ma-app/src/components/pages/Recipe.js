@@ -26,7 +26,7 @@ function Recipe() {
     }, []);
     
     return (
-        <>
+        <div>
             <div className='recipe'>
             RECIPE
             </div>
@@ -48,7 +48,7 @@ function Recipe() {
                 })}
             </div>
             
-        </>
+        </div>
     )
 }
 
