@@ -40,7 +40,7 @@ function SignUp() {
             <div className='sign-up'>
             SIGN UP
             </div>
-            <div className = 'container'>
+            <div className = 'container' style = {{padding: '80px'}}>
                 <div className = 'form-div'>
                     <form onSubmit={submitHandler}>
                         <label></label>
@@ -68,7 +68,7 @@ function SignUp() {
                         value = {password}
                         className = 'form-control form-group'/>
                         
-                        <input type='submit' className='btn btn-danger btn-block' value='submit'/>
+                        <input type='submit' className='btn btn-danger btn-block' value='submit' style = {{backgroundColor: '#276678', borderBlockColor: '#276678'}}/>
                             
                     </form>
                 </div>

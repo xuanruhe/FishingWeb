@@ -43,7 +43,7 @@ function Login() {
             <div className='login'>
             LOG IN
             </div>
-            <div className = 'container'>
+            <div className = 'container' style = {{padding: '80px'}}>
                 <div className = 'form-div'>
                     <form onSubmit={submitHandler}>
                         <label></label>
@@ -71,7 +71,7 @@ function Login() {
                         value = {password}
                         className = 'form-control form-group'/>
                         
-                        <input type='submit' className='btn btn-danger btn-block' value='submit'/>
+                        <input type='submit' className='btn btn-danger btn-block' value='submit' style = {{backgroundColor: '#276678', borderBlockColor: '#276678'}}/>
                             
                     </form>
                 </div>

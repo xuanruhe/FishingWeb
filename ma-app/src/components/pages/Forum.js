@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import '../../App.css';
 import axios from 'axios';
+import '../forum.css';
 
 function Forum() {
 
@@ -49,15 +50,15 @@ function Forum() {
                     const title = item.title
                     const date = item.date.toString().substring(0, 10);
                     return(
-                        <div key = {index}>
-                            <a href={'/forum/' + title}>{title}</a>
-                            <p>{date}</p>
+                        <div key = {index} className='wrapper'>
+                            <a className='title' href={'/forum/' + title}>{title}</a>
+                            <p className='date'>{date}</p>
                         </div>
                     )
                 })}
             </div>
-            <div className = 'container'>
-                <div className = 'form-div'>
+            <div className = 'container' >
+                <div className = 'form-div' >
                     <form onSubmit={submitHandler}>
                         <label></label>
                         <input type = 'text'
@@ -66,13 +67,13 @@ function Forum() {
                         value = {title}
                         className = 'form-control form-group'/>
 
-                        <input type = 'text'
+                        <textarea type = 'text'
                         placeholder = 'Content'
                         onChange = {changeContent}
                         value = {content}
                         className = 'form-control form-group'/>
                         
-                        <input type='submit' className='btn btn-danger btn-block' value='submit'/>
+                        <input type='submit' className='btn btn-danger btn-block' value='submit' style = {{backgroundColor: '#276678', borderBlockColor: '#276678'}}/>
                     </form>
                 </div>
             </div>

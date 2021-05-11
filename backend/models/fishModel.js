@@ -29,7 +29,7 @@ const fishTemplate = new mongoose.Schema({
     },
 })
 
-const fishTable = new mongoose.model('fish', fishTemplate);
+const fishTable = new mongoose.model('fishtables', fishTemplate);
 
 module.exports = fishTable;
 
