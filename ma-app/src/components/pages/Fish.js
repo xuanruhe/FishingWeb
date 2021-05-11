@@ -38,7 +38,7 @@ function Fishes(props) {
                                 <p>{item['scientific name']}</p>
                                 <h3>Category:</h3>
                                 <p>{item.category}</p>
-                                <img src="https://www.digopaul.com/wp-content/uploads/related_images/2015/09/08/cabezone_1.jpg" alt=""/>
+                                <img src={item.image} alt=""/>
                                 <h3>Description: </h3>
                                 <div>
                                     {item.description.map((des, index) => {

@@ -10,7 +10,7 @@ import ReactWeather, { useOpenWeather } from 'react-open-weather';
 function Weather() {
     const APP_KEY = "c000488962a7dbd6c0000095a65d542d";
 
-    Geocode.setApiKey("");
+    Geocode.setApiKey("AIzaSyDFTsS4G5C0wtTiCOQQ0sppUIoBI2TaR8Q");
     Geocode.setLanguage("en");
     Geocode.setRegion("us");
     Geocode.setLocationType("ROOFTOP");

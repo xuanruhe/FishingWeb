@@ -11,6 +11,7 @@ router.get("/fish",
                 console.log(err);
             }
             else {
+                console.log(allFishes)
                 res.json(allFishes);
             }
     });

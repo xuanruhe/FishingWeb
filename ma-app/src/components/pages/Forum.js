@@ -57,8 +57,8 @@ function Forum() {
                     )
                 })}
             </div>
-            <div className = 'container'>
-                <div className = 'form-div'>
+            <div className = 'container' >
+                <div className = 'form-div' >
                     <form onSubmit={submitHandler}>
                         <label></label>
                         <input type = 'text'

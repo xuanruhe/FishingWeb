@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import '../../App.css';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import '../Fishes.css'
 
 
 function Fishes() {
@@ -21,22 +22,21 @@ function Fishes() {
 
 
     return (
-        <>
+        <div>
             <div className='forum'>
                 FISH
             </div>
             <div>
             {fishes.map((item, index) => {
-                console.log(item.image)
                     return (
-                        <div key={index}>
-                            <a href={'/fishes/' + item.name}>{item.name}</a>
-                            <img src="https://www.digopaul.com/wp-content/uploads/related_images/2015/09/08/cabezone_1.jpg" alt=""/>
+                        <div  className = 'wrapper' key={index}>
+                            <a className = 'title' href={'/fishes/' + item.name}>{item.name}</a>
+                            <img className = 'image' src={item.image} alt=""/>
                         </div>
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
 
