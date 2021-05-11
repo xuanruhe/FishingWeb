@@ -53,6 +53,7 @@ require('./auth/auth');
 const loginUrl = require('./routes/login');
 const signupUrl = require('./routes/signup');
 const postsUrl = require('./routes/posts');
+const fishUrl = require('./routes/fish');
 
 const app = express();
 
@@ -64,6 +65,7 @@ app.use(cors());
 app.use('/', loginUrl);
 app.use('/', signupUrl);
 app.use('/', postsUrl);
+app.use('/', fishUrl);
 
 // Handle errors.
 app.use(function(err, req, res, next) {
