@@ -4,9 +4,10 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom'
 
 
-function Fish(props) {
+function Fishes(props) {
 
-    const [fish, setFish] = useState([]);
+    const [fishes, setFish] = useState([]);
+    const {name} = useParams();
 
     async function getFish(){
         axios.get('http://localhost:5000/fish')
@@ -26,17 +27,51 @@ function Fish(props) {
                 FISH
             </div>
             <div>
-            {fish.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <p>{item.name}</p>
-                            <p>{item['scientific name']}</p>
-                        </div>
-                    )
+            {fishes.map((item, index) => {
+                console.log(item.image)
+                    if (item.name === name) {
+                        return (
+                            <div key={index}>
+                                <h3>Name:</h3>
+                                <p>{item.name}</p>
+                                <h3>Scientific Name:</h3>
+                                <p>{item['scientific name']}</p>
+                                <h3>Category:</h3>
+                                <p>{item.category}</p>
+                                <img src="https://www.digopaul.com/wp-content/uploads/related_images/2015/09/08/cabezone_1.jpg" alt=""/>
+                                <h3>Description: </h3>
+                                <div>
+                                    {item.description.map((des, index) => {
+                                        return (
+                                            <p>{des}</p>
+                                        )
+                                    })}
+                                </div>
+                                <h3>Location: </h3>
+                                <div>
+                                    {item.description.map((des, index) => {
+                                        return (
+                                            <p>{des}</p>
+                                        )
+                                    })}
+                                </div>
+                                <h3>Technique: </h3>
+                                <div>
+                                    {item.description.map((des, index) => {
+                                        return (
+                                            <p>{des}</p>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        );
+                    } else  {
+                        return (<div></div>);
+                    }
                 })}
             </div>
         </>
     )
 }
 
-export default Fish
+export default Fishes
