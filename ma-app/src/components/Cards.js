@@ -13,7 +13,7 @@ function Cards() {
                         src='images/hero-lures.jpg'
                         text='Explore all the fish species reside in British Columbia'
                         label='Fish'
-                        path='/fish'
+                        path='/fishes'
                         />
                         <CardItem 
                         src='images/img-9.jpg'
