@@ -1,4 +1,3 @@
-
 import React from 'react';
 import '../../App.css';
 import '../Recipe.css';
@@ -8,9 +7,8 @@ import ReactWeather, { useOpenWeather } from 'react-open-weather';
 
 
 function Weather() {
-    const APP_KEY = "c000488962a7dbd6c0000095a65d542d";
-
-    Geocode.setApiKey("");
+    console.log(process.env.REACT_APP_OPENWEATHER_API)
+    Geocode.setApiKey(process.env.REACT_APP_GOOGLE_CLOUD_API);
     Geocode.setLanguage("en");
     Geocode.setRegion("us");
     Geocode.setLocationType("ROOFTOP");
@@ -18,7 +16,7 @@ function Weather() {
     const [geoLocation, setGeoLocation] = useState({});
 
     const { data, isLoading, errorMessage } = useOpenWeather({
-        key: APP_KEY,
+        key: process.env.REACT_APP_OPENWEATHER_API,
         lat: geoLocation.lat,
         lon: geoLocation.lon,
         lang: 'en',
