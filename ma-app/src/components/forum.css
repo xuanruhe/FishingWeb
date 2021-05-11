@@ -1,0 +1,19 @@
+.wrapper {
+    background-color: #f6f5f5;
+    padding: 2rem;  
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    padding: 20px;
+    
+}
+.date{
+    justify-content: right;
+    font-size: small;
+}
+.title{ 
+    color: #276678;
+    font-size: x-large;
+}

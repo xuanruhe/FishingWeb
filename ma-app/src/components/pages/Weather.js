@@ -43,9 +43,9 @@ function Weather() {
                                 <span>{ingredients.name}</span>
                                 <div>
                                     {
-                                        ingredients.weather.map((weather,index) => {
-                                            return <img src={weather.icon} alt = ' '/>
-                                        })
+                                        // ingredients.weather.map((weather,index) => {
+                                        //     return <img src={weather.icon} alt = ' '/>
+                                        // })
                                     }
                                 </div>
                             </div>

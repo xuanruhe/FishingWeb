@@ -17,7 +17,7 @@ function Cards() {
                         />
                         <CardItem 
                         src='images/img-9.jpg'
-                        text='Explore all the fish species reside in British Columbia'
+                        text='Check out all different fishing techniques and fishing tools'
                         label='Tool'
                         path='/tools'
                         />
@@ -25,13 +25,13 @@ function Cards() {
                     <ul className='cards__items'>
                         <CardItem 
                         src='images/img-9.jpg'
-                        text='Explore all the fish species reside in British Columbia'
+                        text='Do not waste your time. Just click here to check out the weather'
                         label='Weather'
                         path='/weather'
                         />
                         <CardItem 
                         src='images/img-recipe.jpg'
-                        text='Explore all the fish species reside in British Columbia'
+                        text='Want to try out some yummy fish recipes? Find out here !!!'
                         label='Recipe'
                         path='/recipe'
                         />
