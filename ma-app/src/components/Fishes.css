@@ -1,4 +1,4 @@
-.wrapper {
+.fisheswrapper {
     background-color: #f6f5f5;
     /* padding: 2rem;   */
     /* justify-content: center; */
@@ -12,12 +12,12 @@
     align-content: space-around; 
     
 }
-.title{ 
+.fishestitle{ 
     color: #276678;
     font-size: x-large;
    
 }
-.image{
+.fishesimage{
     border-radius: 8px;
     height: 200px;
     width: 250px;

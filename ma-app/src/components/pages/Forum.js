@@ -50,9 +50,9 @@ function Forum() {
                     const title = item.title
                     const date = item.date.toString().substring(0, 10);
                     return(
-                        <div key = {index} className='wrapper'>
-                            <a className='title' href={'/forum/' + title}>{title}</a>
-                            <p className='date'>{date}</p>
+                        <div key = {index} className='forumwrapper'>
+                            <a className='forumtitle' href={'/forum/' + title}>{title}</a>
+                            <p className='forumdate'>{date}</p>
                         </div>
                     )
                 })}

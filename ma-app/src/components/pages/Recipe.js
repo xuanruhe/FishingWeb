@@ -34,7 +34,7 @@ function Recipe() {
                 <input ref={inputRef} placeholder='Ingredient'/>
                 <button onClick={search}>Search</button>
             </div>
-            <div className = 'wrapper'>
+            <div className = 'recipewrapper'>
                 {ingredients.map((item, index) => {
                     return(
                         <div key = {index} className='recipe_container'>

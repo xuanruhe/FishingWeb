@@ -29,9 +29,9 @@ function Fishes() {
             <div>
             {fishes.map((item, index) => {
                     return (
-                        <div  className = 'wrapper' key={index}>
-                            <a className = 'title' href={'/fishes/' + item.name}>{item.name}</a>
-                            <img className = 'image' src={item.image} alt=""/>
+                        <div  className = 'fisheswrapper' key={index}>
+                            <a className = 'fishestitle' href={'/fishes/' + item.name}>{item.name}</a>
+                            <img className = 'fishesimage' src={item.image} alt=""/>
                         </div>
                     )
                 })}
