@@ -4,15 +4,15 @@ import '../Recipe.css';
 import {useEffect, useState, useRef} from 'react';
 
 function Recipe() {
-    const APP_KEY = "358307682e51da250de4240ed816c7ed";
-    const APP_ID = "881002a8";
+    // const APP_KEY = "358307682e51da250de4240ed816c7ed";
+    // const APP_ID = "881002a8";
     const [ingredients, setIngredients] = useState([]);
     const inputRef = useRef(null);
     const search = () => {
         searchForRecipe(inputRef.current.value)
     }
     const searchForRecipe = (query) => {
-        let url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&to=20&calories=591-722`
+        let url = `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_RECIPE_API_ID}&app_key=${process.env.REACT_APP_RECIPE_API_KEY}&to=20&calories=591-722`
         fetch(url)
         .then(response => {return response.json()})
         .then(res => {
